@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+		<meta https-equiv="x-ua-compatible" content="IE=edge" >
+      	<meta name="keywords" content="live,Hangzhou High School TV Station Qianjiang Division,Live Platform for Hangzhou High School TV Station Qianjiang Division,Zhejiang Hangzhou High School TV Station Qianjiang Division,Live Platform for Zhejiang Hangzhou High School TV Station Qianjiang Division,live system,techzjc,科技ZJC网" /><!--Set keywords-->
+      	<meta name="description" content="Welcome to  the live platform for Hangzhou High School TV Station Qianjiang Division! We will provide real-time live service. Questions? It is welcomed to email us through hgqjdst@vip.techzjc.com or chat with QQ number 3303435488. Hangzhou High School TV Station Qianjiang Division welcomes you to join!" /><!--Set description-->
+		<meta name="viewport" content="width=device-width, initial-scale=1"><!--Set the page as mobile first-->
+		<link rel="stylesheet" href="../css/bootstrap.min.css"><!--Import Bootstrap stylesheet-->
+		<link rel="stylesheet" href="../css/w3.css"><!--Import simple animation-->
+      	<link rel="stylesheet" href="../css/combine.css"><!--Import stylesheet for the costom combined part-->
+      	<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css" /><!--Import stylesheet for Aprasa Video Live API-->
+		<script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.8.2/aliplayer-min.js"></script><!--Import Aprasa Video Live API-->
+      	<!--<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css" />-->
+		<script type="text/javascript" src="../js/jquery.min.js"></script><!--Import jquery library-->
+		<script type="text/javascript" src="../js/popper.min.js"></script><!--Import popper.min.js-->
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script><!--Import bootstrap.min.js-->
+		<script type="text/javascript" src="../js/combine.js"></script><!--Import animation for the costom combined part-->
+      	<script src="../js/time.js"></script>
+        <title>Live Platform for Hangzhou High School TV Station Qianjiang Division</title>
+		<!-- CookiePro Cookies Consent Notice end -->
+	</head>
+	<body>
+      <img src="../logo-black.png" weigh="100px" height="101px">
+  		<!--Start for menu part-->
+  			<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+				<div id="myNav" class="overlay">
+  					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  					<div class="overlay-content">
+    					<a href="#">Live</a>
+    					<a href="https://space.bilibili.com/287842032" target="_blank">More Videos</a>
+    					<a href="https://wpa.qq.com/msgrd?v=3&uin=3303435488&site=qq&menu=yes" target="_blank">Contact Us via QQ</a>
+    					<img src="../logo-white.png" weigh="200px" height="202px">
+  					</div>
+				</div>
+				<span style="font-size:20px;cursor:pointer;" class="text-light" onclick="openNav()">&#9776;Live Platform for Hangzhou High School TV Station Qianjiang Division</span>
+			</nav>
+		<!--End for menu part-->
+      <noscript>
+      <div class="w3-animate-down alert alert-danger alert-dismissible show" id="alert-no-JS">
+        <h3>Oops！</h3>
+        <hr />
+        <p>This site requires Javascript to work!</p>
+        <p>It seems that your browser does not support Javascript or you use the plug-ins like Noscript&copy; to forbid our site's Javascript!</p>
+        <p>Please check whether or not you are using the latest Google Chrome&copy;, Mozilla Firefox&copy;, or Microsoft Edges&copy;.</p>
+        <p>Or give this site Javascript permission via plug-ins such as Noscript&copy;.</p>
+  		</div>
+      </noscript>
+    	<!--Start for alert live off part-->  
+        <!--<div class="w3-animate-down alert alert-primary alert-dismissible show" id="alert-translation">
+  			<button type="button" class="close" data-dismiss="alert" onclick="alert_translation(this)">&times;</button>
+          	<p>
+              <span>
+                Wanna English Apperance of the website?
+                <strong>
+                  <a href="../eng/index.html">
+                    Click Here
+                  </a>
+                </strong>
+              </span>
+          	</p>
+          	留在中文（简体）界面？请点击右边的关闭按钮！
+  		</div>-->
+  		<!--<div class="w3-animate-down alert alert-primary alert-dismissible show" id="alert-translation">
+  			<button type="button" class="close" data-dismiss="alert" onclick="alert_translation(this)">&times;</button>
+          	<p>杭高钱江电视台2019纳新开始了！加入QQ群以了解更多相关内容！</p>
+          	<p>QQ群号：612731452</p>
+  		</div>-->
+		<div class="w3-animate-down alert alert-danger alert-dismissible show" id="alert-live-offline">
+  			<button type="button" class="close" data-dismiss="alert" onclick="alert_hide_live_offline(this)">&times;</button>
+  			<strong>Sorry!</strong></strong> Live has already ended or has not started yet!
+  		</div>
+  		<!--
+      <div id="alert-change-to-pc"></div>
+      	<script type="text/javascript" src="../js/system-decide-index_v2.js"></script><!--Import javascript that decide the device and popup the page-->
+    <!--	<div class="w3-animate-down alert alert-warning alert-dismissible show" id="alert-video">
+  			<button type="button" class="close" data-dismiss="alert" onclick="alert_hide_video(this)">&times;</button>
+  			Wanna higher resolution of this video? Go to <a href="https://space.bilibili.com/287842032" target="_blank">Hangzhou High School TV Station Qianjiang Division Official Bilibili account</a> or  goto <a href="https://www.bilibili.com/video/av65361365">https://www.bilibili.com/video/av65361365</a>!
+  		</div>
+      	<!--End for alert live off part-->
+      	<!--Start for live window part-->
+		<!--sse--> <div class="row">
+          	<div class="prism-player col-sm-12 w3-animate-top" id="player-con"></div>
+		</div>
+      <!--/sse-->
+      	<!--End for live window part-->
+      	<!--Start for live player setting part-->
+      	<script src="../js/player-live.js"></script>
+      <!--<script src="../js/player.js"></script>-->
+      <!--End for live player setting part-->
+      <!--Start for live broadcast part-->
+      <div class="card-group row">
+        <div class="card bg-primary w3-animate-left col-sm-6">
+          <div class="card-body text-center">
+            <p class="card-text" style="text-color:#ffffff;">Current Playing:</p>
+            <p class="card-text" style="text-color:#ffffff;">&nbsp;</p>
+            <p class="card-text" style="text-color:#ffffff;">Talent Show</p>
+          </div>
+        </div>
+        <div class="card bg-success w3-animate-right col-sm-6">
+          <div class="card-body text-center">
+            <p class="card-text" style="text-color:#ffffff;">Time Schedule:</p>
+            <p class="card-text" style="text-color:#ffffff;">&nbsp;</p>
+            <p class="card-text" style="text-color:#ffffff;">6PM-9PM Dec 15th, 2019</p>
+          </div>
+        </div>
+      </div>
+      <!--End for live broadcast part-->
+      <!--Start for back to top part-->
+      <button onclick="topFunction()" id="myBtn" title="Back to Top">&nbsp;^&nbsp;</button>
+      <!--End for back to top part-->
+      <!--Start for footer part-->
+     <hr />
+      <div align="center">
+      <p align="center" class="w3-animate-bottom">Live Platform for Hangzhou High School TV Station Qianjiang Division</p>
+      <a href="./friendlink.html" align="center">Friendlink</a>
+        <!--<p align="center" class="w3-animate-bottom"><a href="./pc.html">PC</a>|<a href="./m.html">Mobile</a></p>-->
+      </div>
+      <!--End for footer part-->
+  </body>
+</html>

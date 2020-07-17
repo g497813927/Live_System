@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+		<meta https-equiv="x-ua-compatible" content="IE=edge" >
+      	<meta name="keywords" content="直播,杭高钱江电视台,杭高钱江电视台直播系统,浙江省杭州高级中学电视台钱江分部,浙江省杭州高级中学电视台钱江分部直播系统" /><!--Set keywords-->
+      	<meta name="description" content="欢迎进入杭高钱江电视台直播系统，我们将竭诚为您提供实时的直播服务，如果你有问题，欢迎发送邮件至hgqjdst@vip.techzjc.com或者联系QQ：3303435488，杭高钱江电视台，虽初生，亦趋自强，长期招新中..." /><!--Set description-->
+		<meta name="viewport" content="width=device-width, initial-scale=1"><!--Set the page as mobile first-->
+		<link rel="stylesheet" href="./css/bootstrap.min.css"><!--Import Bootstrap stylesheet-->
+		<link rel="stylesheet" href="./css/w3.css"><!--Import simple animation-->
+      	<link rel="stylesheet" href="./css/combine.css"><!--Import stylesheet for the costom combined part-->
+      	<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css" /><!--Import stylesheet for Aprasa Video Live API-->
+		<script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.8.2/aliplayer-min.js"></script><!--Import Aprasa Video Live API-->
+		<script src="./js/time.js"></script>
+      	<!--<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.2/skins/default/aliplayer-min.css" />-->
+		<script type="text/javascript" src="./js/jquery.min.js"></script><!--Import jquery library-->
+		<script type="text/javascript" src="./js/popper.min.js"></script><!--Import popper.min.js-->
+		<script type="text/javascript" src="./js/bootstrap.min.js"></script><!--Import bootstrap.min.js-->
+		<script type="text/javascript" src="./js/combine.js"></script><!--Import animation for the costom combined part-->
+        <title>杭高钱江电视台-直播系统</title>
+	</head>
+	<body>
+      <img src="./logo-black.png" weigh="100px" height="101px">
+  		<!--Start for menu part-->
+  			<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+				<div id="myNav" class="overlay">
+  					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  					<div class="overlay-content">
+    					<a href="#">直播</a>
+    					<a href="https://space.bilibili.com/287842032" target="_blank">更多视频</a>
+    					<a href="https://wpa.qq.com/msgrd?v=3&uin=3303435488&site=qq&menu=yes" target="_blank">撩官方QQ账号~</a>
+    					<img src="./logo-white.png" weigh="200px" height="202px">
+  					</div>
+				</div>
+				<span style="font-size:20px;cursor:pointer;" class="text-light" onclick="openNav()">&#9776;杭高钱江电视台-直播系统</span>
+			</nav>
+		<!--End for menu part-->
+      <noscript>
+      <div class="w3-animate-down alert alert-danger alert-dismissible show" id="alert-no-JS">
+        <h3>请注意！</h3>
+        <hr />
+        <p>此网站需要JavaScript才可以正常运作！</p>
+        <p>看起来你的浏览器不支持JavaScript或者你使用了NoScript之类的插件禁用了JavaScript！</p>
+        <p>如果你是前者，建议下载最新的Google Chrome或Mozilla Firefox以便正常访问</p>
+        <p>如果你是后者，建议在对应插件内设置临时允许或信任JavaScript</p>
+        <p>给您带来的不便，敬请谅解！</p>
+  		</div>
+      </noscript>
+    	<!--Start for alert live off part-->  
+        <!--<div class="w3-animate-down alert alert-primary alert-dismissible show" id="alert-translation">
+  			<button type="button" class="close" data-dismiss="alert" onclick="alert_translation(this)">&times;</button>
+          	<p>
+              <span>
+                Wanna English Apperance of the website?
+                <strong>
+                  <a href="./eng/index.html">
+                    Click Here
+                  </a>
+                </strong>
+              </span>
+          	</p>
+          	留在中文（简体）界面？请点击右边的关闭按钮！
+  		</div>-->
+  		<!--<div class="w3-animate-down alert alert-primary alert-dismissible show" id="alert-translation">
+  			<button type="button" class="close" data-dismiss="alert" onclick="alert_translation(this)">&times;</button>
+          	<p>杭高钱江电视台2019纳新开始了！加入QQ群以了解更多相关内容！</p>
+          	<p>QQ群号：612731452</p>
+  		</div>
+  		-->
+		<div class="w3-animate-down alert alert-danger alert-dismissible show" id="alert-live-offline">
+  			<button type="button" class="close" data-dismiss="alert" onclick="alert_hide_live_offline(this)">&times;</button>
+  			<strong>抱歉!</strong> 直播已经结束或者还未开始！
+  		</div>
+  		<!--
+      <div id="alert-change-to-pc"></div>
+      	<script type="text/javascript" src="./js/system-decide-index_v2.js"></script><!--Import javascript that decide the device and popup the page-->
+    	<!--<div class="w3-animate-down alert alert-warning alert-dismissible show" id="alert-video">
+  			<button type="button" class="close" data-dismiss="alert" onclick="alert_hide_video(this)">&times;</button>
+  			想观看这一个视频的更高画质版本？前往<a href="https://space.bilibili.com/287842032" target="_blank">杭高钱江电视台官方B站账号</a>,或者登陆<a href="https://www.bilibili.com/video/av65361365">https://www.bilibili.com/video/av65361365</a>即可查看！
+  		</div>
+      	-->
+      	<!--End for alert live off part-->
+      	<!--Start for live window part-->
+		<!--sse--> <div class="row">
+          	<div class="prism-player col-sm-12 w3-animate-top" id="player-con"></div>
+		</div>
+      <!--/sse-->
+      	<!--End for live window part-->
+      	<!--Start for live player setting part-->
+      	<!--此处须知:下面两行只能开一个!!!-->
+      	
+      	<script src="./js/player.js"></script>
+      <!--<script src="./js/player-live.js"></script>-->
+      <!--End for live player setting part-->
+      <!--Start for live broadcast part-->
+      <div class="card-group row">
+        <div class="card bg-primary w3-animate-left col-sm-6">
+          <div class="card-body text-center">
+            <p class="card-text" style="text-color:#ffffff;">当前节目：</p>
+            <p class="card-text" style="text-color:#ffffff;">&nbsp;</p>
+            <p class="card-text" style="text-color:#ffffff;">None</p>
+          </div>
+        </div>
+        <div class="card bg-success w3-animate-right col-sm-6">
+          <div class="card-body text-center">
+            <p class="card-text" style="text-color:#ffffff;">活动时间：</p>
+            <p class="card-text" style="text-color:#ffffff;">&nbsp;</p>
+            <p class="card-text" style="text-color:#ffffff;">NULL</p>
+          </div>
+        </div>
+      </div>
+      <!--End for live broadcast part-->
+      <!--Start for back to top part-->
+      <button onclick="topFunction()" id="myBtn" title="返回顶部">&nbsp;^&nbsp;</button>
+      <!--End for back to top part-->
+      <!--Start for footer part-->
+     <hr />
+      <div align="center">
+      <p align="center" class="w3-animate-bottom">杭高钱江电视台-直播系统</p>
+      <a href="./friendlink.html" align="center">友情链接</a>
+        <!--<p align="center" class="w3-animate-bottom"><a href="./pc.html">电脑版</a>|<a href="./m.html">手机版</a></p>-->
+      </div>
+      <!--End for footer part-->
+  </body>
+</html>
